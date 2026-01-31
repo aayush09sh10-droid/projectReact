@@ -1,24 +1,15 @@
-import { useState } from 'react'
-import { TaskForm } from './assets/task/TaskForm';
-import { DisplayTask } from './assets/task/displayTask';
-
-
+import React from 'react'
+import Feature from './component/Feature.jsx'
 
 function App() {
-  
-  const [taskList, setTaskList] = useState([]);
 
-
-  const addTaskList=(task)=>{
-    setTaskList([...taskList, task]);
-    
-  }
-
+  const name="aayush";
+  const feature={id:1,name:"feature"};
+  const array=["Deal","NoDeal"] 
   return (
-    <>
-    <TaskForm addTaskList={addTaskList}/> 
-    <DisplayTask taskList={taskList}/> 
-    </>
+    <div>
+      <Feature />
+    </div>
   )
 }
 
